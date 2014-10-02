@@ -1,0 +1,82 @@
+#logo {
+	height: 30px;
+	width: 40px;
+	margin-left: 12px;
+	margin-right: 10px;
+	margin-top: 4px;
+}
+
+#settings-icon {
+	font-size: 28px;
+}
+
+#profile-icon {
+	height: 20px;
+	width: 20px;
+}
+
+#home-icon {
+	font-size: 32px;
+}
+
+#users-icon {
+	height: 20px;
+	width: 30px;
+}
+
+#hai-nav {
+	margin-bottom: 16px;
+}
+
+#logo-area {
+	margin: 0 auto;
+}
+
+#profile-pic {
+	margin-bottom: 4px;
+}
+
+#profile-box {
+	height: 450px;
+}
+
+#profile-info {
+	padding: 10px;
+	background-color: #E6E6E6;
+}
+
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+
+footer, .push {
+	height: 50px; /* .push must be the same height as .footer */
+	width: 100%;
+}
+
+footer p {
+	text-align: center;
+	height: 50px;
+	font-size: 12px;
+}
+
+.post {
+	background-color: white;
+	border-bottom: solid #E6E6E6 1px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	margin-right: 10px;
+	padding-bottom: 20px;
+	img {
+		border-radius: 50%;
+	}
+}
