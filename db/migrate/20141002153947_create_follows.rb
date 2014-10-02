@@ -1,6 +1,6 @@
-class CreateFollowers < ActiveRecord::Migration
+class CreateFollows < ActiveRecord::Migration
   def change
-    create_table :followers do |t|
+    create_table :follows do |t|
       t.references :follower, index: true
       t.references :followed, index: true
       t.timestamps
