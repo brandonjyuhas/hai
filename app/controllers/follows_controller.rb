@@ -3,7 +3,9 @@ class FollowsController < ApplicationController
 	before_action :authenticate_user!
 
 	def followers
-		@followers = Follow.where(followed: params[:user_id])
+		@followers = User.find(params[:id]).followers
+
+		puts @followers.inspect
 	end
 
 	def followed

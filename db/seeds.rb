@@ -17,8 +17,8 @@ users = User.create([
 	{
 		email: "pam@hai.com",
 		username: "Pam!",
-		password: "WOWWOWWOW",
-		profile_photo: "http://www.zemwallpaper.com/wp-content/uploads/2014/04/cute_little_baby_facebook_profile_picture.jpg",
+		password: "WOW123456",
+		profile_photo:"http://www.zemwallpaper.com/wp-content/uploads/2014/04/cute_little_baby_facebook_profile_picture.jpg",
 		personal_website: "www.pam.com",
 		bio: "PAMPAMPAMPAM" },
 	{

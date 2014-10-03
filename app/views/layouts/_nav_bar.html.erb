@@ -9,17 +9,24 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li><a id="home-icon" href="#">&#8962;</a></li>
-      <li><a href="#"><img id="users-icon" src="http://i.imgur.com/2YR3PxU.png"></a></li>
-      <li><a href="#"><img id="profile-icon" src="http://i.imgur.com/msk9tLg.png"></a></li>
+      <li><%= link_to '&#8962;'.html_safe, root_path %></li>
+
+      <li><%= link_to users_path do %> 
+        <img id="users-icon" src="http://i.imgur.com/2YR3PxU.png"> 
+        <% end %></li>
+        <%  if user_signed_in? %>
+      <li><%= link_to user_path(current_user) do %> 
+        <img id="profile-icon" src="http://i.imgur.com/msk9tLg.png">
+       <% end %></li>
 
       <li class="has-dropdown">
         <a id="settings-icon" href="#">&#9881;</a>
         <ul class="dropdown">
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><%= link_to 'Settings', edit_user_registration_path(current_user) %></li>
+          <li><%= link_to  'Logout', destroy_user_session_path, method: 'delete' %></a></li>
         </ul>
       </li>
+      <% end %> 
     </ul>
   </section>
 

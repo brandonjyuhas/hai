@@ -1,1 +1,18 @@
-followers.html.erb
+this is a list of all of the followers of the current user
+
+
+<div class="post">
+  <ul>
+    <% @followers.each do |follower| %>
+    <li class="row">
+      <div class="small-2 columns"><%= image_tag follower.profile_photo, class: "pic" %></div>
+      <div class="small-10 columns">
+        <p><%= follower.username %></p>
+        <p><%= follower.bio %></p>
+     </div>
+   </li>
+   <% end %>
+</ul>
+</div>
+
+
