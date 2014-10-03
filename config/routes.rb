@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     resources :follows
   end
 
+  resources :posts
+
+  
+
   
 
 
