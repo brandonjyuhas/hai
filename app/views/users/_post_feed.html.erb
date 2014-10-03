@@ -2,7 +2,8 @@
 
 <div class="post">
   <div class="row">
-    <div class="small-2 columns"><img src="<%= x.user.profile_photo %>"/></div>
+    <div class="small-2 columns"><img src="<% @user = User.find_by(id: x.user_id) %>
+    	<%= @user.profile_photo %>"/></div>
     <div class="small-10 columns">
       <p><%= x.body %></p>
     </div>
