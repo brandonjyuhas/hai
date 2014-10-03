@@ -14,10 +14,13 @@
         <div class="small-12 columns">
 
       <!-- other user partial-->
-
+      <% if current_user != @user %>
+      <%= @user.username %>
+      <%= @user.bio %> 
       <!-- new post partial -->
+      <% else %>
       <%= render "users/new_post_form" %>
-
+      <% end %>
       <!-- posts partial -->
       <%= render "users/post_feed" %>  
      
