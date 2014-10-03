@@ -5,9 +5,15 @@ class PostsController < ApplicationController
 	def index
 		@followed_ids = Follow.where(follower_id: current_user.id).select(:followed_id).map(&:followed_id)
 
-		@posts = Post.where(user_id: @followed_ids)
-		# @posts << Post.where(user_id:current_user.id)
-		@posts.order(:created_at)
+		@posts = Post.where(user_id: @followed_ids).order(:created_at)
+		@my_posts = Post.where(user_id: current_user.id)
+		@my_posts.each do |x|
+			@posts.push x
+		end
+
+		@posts = @posts.sort_by &:created_at
+		@posts.reverse!
+		puts "\n\n\n\n\n\n #{@posts.inspect} \n\n\n\n\n #{@posts.reverse}}"
 	end
 
 	def show
