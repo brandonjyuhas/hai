@@ -1,11 +1,12 @@
-this is a list of all of the followers of the current user
-
-
 <div class="post">
   <ul>
     <% @followers.each do |follower| %>
     <li class="row">
-      <div class="small-2 columns"><%= image_tag follower.profile_photo, class: "pic" %></div>
+      <div class="small-2 columns">
+        <%= link_to user_path(follower) do %> 
+        <img class="pic" src="<%= follower.profile_photo %>" />
+        <% end %>
+      </div>
       <div class="small-10 columns">
         <p><%= follower.username %></p>
         <p><%= follower.bio %></p>
