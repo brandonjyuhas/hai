@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   resources :users do
-    resources :follows
+    resources :follows, only: [:create, :destroy] 
+    member do 
+      get 'followers', to: 'follows#followers'
+    end
   end
 
   resources :posts
