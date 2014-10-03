@@ -1,0 +1,51 @@
+<html>
+
+<head>
+	<title>Hai: Basically Twitter.</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+     
+  <!-- navbar partial -->
+  <%= render "nav_bar" %>
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <aside class="left-off-canvas-menu">
+        
+      <!-- Off canvas profile partial -->
+      <%= render "off_canvas_profile" %>
+  
+    </aside>
+
+    <div class="wrapper">
+      <div id="profile-button"><a class="left-off-canvas-toggle" href="#">&#9654;</a></div>  
+        <div class="small-12 columns">
+
+      <!-- other user partial-->
+
+      <!-- new post partial -->
+      <%= render "new_post_form" %>
+
+      <!-- posts partial -->
+      <%= render "post_feed" %>  
+     
+      <div class="push"></div>
+    
+    </div>
+
+    <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+ 
+
+ <!-- footer partial -->
+ <%= render "footer" %>
+
+</body>
+
+</html>

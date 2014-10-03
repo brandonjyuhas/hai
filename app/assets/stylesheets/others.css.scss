@@ -1,0 +1,140 @@
+#logo {
+	height: 30px;
+	width: 40px;
+	margin-left: 12px;
+	margin-right: 10px;
+	margin-top: 4px;
+}
+
+#settings-icon {
+	font-size: 28px;
+}
+
+#username h5 {
+	color: white;
+}
+
+#profile-icon {
+	height: 20px;
+	width: 20px;
+}
+
+#home-icon {
+	font-size: 30px;
+}
+
+#users-icon {
+	height: 20px;
+	width: 30px;
+}
+
+#hai-nav {
+	margin-bottom: 0px;
+}
+
+#logo-area {
+	margin: 0 auto;
+}
+
+#user-link h4 small a{
+	color: #429E9D;
+}
+
+#profile-pic {
+	margin-bottom: 4px;
+}
+
+#profile-info {
+	padding: 10px;
+}
+
+#about h4 small {
+	color: #919191;
+}
+
+#profile-button a {
+	font-size: 32px;
+	margin-left: -5px;
+	color: #429E9D;
+}
+
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+
+
+footer {
+	background-color: #333333;
+}
+
+footer, .push {
+	height: 50px; /* .push must be the same height as .footer */
+	width: 100%;
+}
+
+footer p {
+	text-align: center;
+	color: white;
+	height: 50px;
+	font-size: 12px;
+	line-height: 50px;
+}
+
+.post {
+	background-color: white;
+	border-bottom: solid #E6E6E6 1px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	margin-right: 10px;
+	padding-bottom: 20px;
+	img {
+		border-radius: 50%;
+	}
+}
+
+#new-post {
+	background-color: white;
+	border-bottom: solid #E6E6E6 1px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	padding-bottom: 20px;
+}
+
+#other-user {
+	background-color: white;
+	border-bottom: solid #E6E6E6 1px;
+	margin-bottom: 50px;
+	margin-right: 10px;
+	padding-bottom: 10px;
+	#other-user-profile-pic img {
+		border-radius: 50%;
+		height: 100px;
+		width: 100px;
+		margin: 0 auto;
+	}
+	#sf-username {
+		color: black;
+	}
+	#sf-bio small {
+		color: black;
+	}
+	#sf-link h4 small a{
+	color: #429E9D;
+}
+}
+
+#id {
+	margin-left: 10px;
+	a {
+		font-size: 26px;
+	}
+}
