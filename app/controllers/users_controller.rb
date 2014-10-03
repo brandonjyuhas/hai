@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 	# before_action :authenticate_user!
 	
 	def index
-		@users = User.all.order(:name)
+		@users = User.all.order(:username)
 	end
 
 	def show

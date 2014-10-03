@@ -1,1 +1,15 @@
 this is a list of all users
+
+<div class="post">
+  <ul>
+    <% @users.each do |user| %>
+    <li class="row">
+      <div class="small-2 columns"><%= image_tag user.profile_photo, class: "pic" %></div>
+      <div class="small-10 columns">
+        <p><%= user.username %></p>
+        <p><%= user.bio %></p>
+     </div>
+   </li>
+   <% end %>
+</ul>
+</div>
