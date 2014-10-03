@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
 
+	before_action :authenticate_user!
+
 	def index
-		@followed_ids = Follow.where(follower_id: current_user.id).select(:followed_id).map( &:followed_id )
+		@followed_ids = Follow.where(follower_id: current_user.id).select(:followed_id).map(&:followed_id)
 
 		Post.where(user_id: @followed_ids)
 	end

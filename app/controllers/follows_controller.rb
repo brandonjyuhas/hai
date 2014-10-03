@@ -1,5 +1,7 @@
 class FollowsController < ApplicationController
 
+	before_action :authenticate_user!
+
 	def followers
 		@followers = Follow.where(followed: params[:user_id])
 	end
