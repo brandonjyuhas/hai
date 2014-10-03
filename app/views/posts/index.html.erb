@@ -1,1 +1,30 @@
-<%= current_user.username %>
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <aside class="left-off-canvas-menu">
+      
+      <% if current_user %>  
+      <!-- Off canvas profile partial -->
+      <%= render "layouts/off_canvas_profile" %>
+    <% end %> 
+    </aside>
+
+    <div class="wrapper">
+      <div id="profile-button"><a class="left-off-canvas-toggle" href="#">&#9654;</a></div>  
+        <div class="small-12 columns">
+
+      <!-- other user partial-->
+
+      <!-- new post partial -->
+      <%= render "users/new_post_form" %>
+
+      <!-- posts partial -->
+      <%= render "users/post_feed" %>  
+     
+      <div class="push"></div>
+    
+    </div>
+
+    <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
