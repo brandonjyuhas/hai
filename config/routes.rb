@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
 
   root 'posts#index'
@@ -7,7 +8,8 @@ Rails.application.routes.draw do
     resources :follows
   end
 
-  
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
