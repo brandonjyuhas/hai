@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 	def index
 		@followed_ids = Follow.where(follower_id: current_user.id).select(:followed_id).map(&:followed_id)
 
-		Post.where(user_id: @followed_ids)
+		@posts = Post.where(user_id: @followed_ids)
 	end
 
 	def show
