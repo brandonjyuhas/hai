@@ -16,7 +16,7 @@
 }
 
 #home-icon {
-	font-size: 32px;
+	font-size: 30px;
 }
 
 #users-icon {
@@ -25,7 +25,7 @@
 }
 
 #hai-nav {
-	margin-bottom: 16px;
+	margin-bottom: 0px;
 }
 
 #logo-area {
@@ -36,13 +36,13 @@
 	margin-bottom: 4px;
 }
 
-#profile-box {
-	height: 450px;
-}
-
 #profile-info {
 	padding: 10px;
-	background-color: #E6E6E6;
+}
+
+#profile-button {
+	font-size: 32px;
+	margin-left: -5px;
 }
 
 * {
@@ -58,6 +58,11 @@ html, body {
 	margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
 }
 
+
+footer {
+	background-color: #333333;
+}
+
 footer, .push {
 	height: 50px; /* .push must be the same height as .footer */
 	width: 100%;
@@ -65,6 +70,7 @@ footer, .push {
 
 footer p {
 	text-align: center;
+	color: white;
 	height: 50px;
 	font-size: 12px;
 }
@@ -78,5 +84,20 @@ footer p {
 	padding-bottom: 20px;
 	img {
 		border-radius: 50%;
+	}
+}
+
+#new-post {
+	background-color: white;
+	border-bottom: solid #E6E6E6 1px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	padding-bottom: 20px;
+}
+
+#id {
+	margin-left: 10px;
+	a {
+		font-size: 26px;
 	}
 }
