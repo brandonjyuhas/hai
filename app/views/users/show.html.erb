@@ -1,4 +1,5 @@
 <html>
+
 <head>
 	<title>Hai: Basically Twitter.</title>
 	<link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css.scss">
@@ -6,137 +7,43 @@
 
 <body>
      
-
-  <nav id="hai-nav" class="top-bar" data-topbar role="navigation">
-    
-    <ul class="title-area">
-      <li id="logo"><img src="http://i.imgur.com/glF1xD1.png"></li>
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li><a id="home-icon" href="#">&#8962;</a></li>
-        <li><a href="#"><img id="users-icon" src="http://i.imgur.com/2YR3PxU.png"></a></li>
-        <li><a href="#"><img id="profile-icon" src="http://i.imgur.com/msk9tLg.png"></a></li>
-
-        <li class="has-dropdown">
-          <a id="settings-icon" href="#">&#9881;</a>
-          <ul class="dropdown">
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-    
-  </nav>
+  <!-- navbar partial -->
+  <%= render "nav_bar" %>
 
 <div class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
-
-    <div id="profile-button"><a class="left-off-canvas-toggle" href="#">&#9654;</a></div>
-
-    <!-- Off Canvas Menu -->
     <aside class="left-off-canvas-menu">
-        <!-- whatever you want goes here -->
-      <div id="profile-box">
-        <img id="profile-pic" src="http://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg"/>
-        <div id="profile-info">
-          <div id="username"><h5>Jake Catt</h5></div>
-          <section class="section">
-            <div id="about"><h4><small>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.</small></h4></div>
-            <div id="user-link"><h4><small><a href="www.google.com">www.jakecatt.com</a></small></h4><div>
-          </section>
-          <hr>
-          <section class="section">
-            <h4><small><a href="#">Following:</a></small></h4>
-            <h4><small><a href="#">Followers:</a></small></h4>
-          </section>
-          <hr>
-        </div>
-      </div>
-
+        
+      <!-- Off canvas profile partial -->
+      <%= render "off_canvas_profile" %>
+  
     </aside>
 
-    <!-- main content goes here -->
-    <div class="wrapper"> 
-       
-      <div class="small-12 columns">
-   
-        <div id="new-post">
-          <div class="row">
-            <div class="small-12 columns">
-              <form>
-                  <label>
-                    <input type="text" placeholder="Hai!">
-                  </label>
-              </form>
-            </div>
-          </div>
-        </div>
+    <div class="wrapper">
+      <div id="profile-button"><a class="left-off-canvas-toggle" href="#">&#9654;</a></div>  
+        <div class="small-12 columns">
 
-        <div class="post">
-          <div class="row">
-            <div class="small-2 columns"><img src="http://placehold.it/80x80&text=[img]"/></div>
-            <div class="small-10 columns">
-              Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo.</p>
-            </div>
-          </div>
-        </div>
+      <!-- other user partial-->
 
-        <div class="post">
-          <div class="row">
-            <div class="small-2 columns"><img src="http://placehold.it/80x80&text=[img]"/></div>
-            <div class="small-10 columns">
-              Bacon ipsum dolor sit amet !!!!.</p>
-            </div>
-          </div>
-        </div>
+      <!-- new post partial -->
+      <%= render "new_post_form" %>
 
-        <div class="post">
-          <div class="row">
-            <div class="small-2 columns"><img src="http://placehold.it/80x80&text=[img]"/></div>
-            <div class="small-10 columns">
-              Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="post">
-          <div class="row">
-            <div class="small-2 columns"><img src="http://placehold.it/80x80&text=[img]"/></div>
-            <div class="small-10 columns">
-              Bacon ipsum dolo</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="post">
-          <div class="row">
-            <div class="small-2 columns"><img src="http://placehold.it/80x80&text=[img]"/></div>
-            <div class="small-10 columns">
-              Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehe.</p>
-            </div>
-          </div>
-        </div>
+      <!-- posts partial -->
+      <%= render "post_feed" %>  
+     
+      <div class="push"></div>
     
-   
-   <div class="push"></div>
-  </div>
+    </div>
 
-  <!-- close the off-canvas menu -->
-  <a class="exit-off-canvas"></a>
+    <a class="exit-off-canvas"></a>
 
   </div>
-</div>  
-   
-  <footer>
-    <p>© Copyright Hai, LLC</p>
-  </footer>
-    
+</div>
+ 
+
+ <!-- footer partial -->
+ <%= render "footer" %>
 
 </body>
+
 </html>
