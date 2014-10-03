@@ -3,9 +3,30 @@
     <div class="small-12 columns">
       <form>
           <label>
-            <input type="text" placeholder="Hai!">
+
+            <input type="text" placeholder="Hai!" id="update">
           </label>
       </form>
     </div>
   </div>
 </div>
+
+<script>
+	$("#update").keypress(function (e) {
+  		if (e.which == 13) {
+    e.preventDefault();
+    text = $('input')[0].value;
+
+    $.post("/posts", { 	post: { user_id: <%= current_user.id %>, body: text } })
+    .done(function(data){
+    // $('ul').prepend("<li data-todo-id=" + data.id  +">" + data.task + "<input id=\"done\" name=\"done\" type=\"checkbox\" value=\"yes\"><span>&times</span></li>");
+    // $("li span").on('click', deleteObject);
+    // $("ul input").on('click', checkMark);
+    // })
+    console.log("WOWWWW");
+})
+    .fail(function(){ console.log("Didn't work"); });
+}
+
+  });
+</script>
