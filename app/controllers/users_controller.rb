@@ -26,10 +26,4 @@ class UsersController < ApplicationController
 		@user.destroy
 		@posts.delete
 	end
-
-	private
-
-		def user_params
-			params.require(:user).permit(:username, :bio, :password, :password_confirmation, :link, :profile_pic)
-		end
 end
