@@ -10,6 +10,10 @@
 	font-size: 28px;
 }
 
+#username h5 {
+	color: white;
+}
+
 #profile-icon {
 	height: 20px;
 	width: 20px;
@@ -32,6 +36,10 @@
 	margin: 0 auto;
 }
 
+#user-link h4 small a{
+	color: #429E9D;
+}
+
 #profile-pic {
 	margin-bottom: 4px;
 }
@@ -40,9 +48,14 @@
 	padding: 10px;
 }
 
-#profile-button {
+#about h4 small {
+	color: #919191;
+}
+
+#profile-button a {
 	font-size: 32px;
 	margin-left: -5px;
+	color: #429E9D;
 }
 
 * {
@@ -73,6 +86,7 @@ footer p {
 	color: white;
 	height: 50px;
 	font-size: 12px;
+	line-height: 50px;
 }
 
 .post {
