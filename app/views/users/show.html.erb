@@ -17,9 +17,7 @@
       <% if current_user != @user %>
       <div> <%= @user.username %> </div>
       <div> <%= @user.bio %> </div>
-        <%= form_for @follow_request, url:  user_follows_path(@user) do |f| %>
-          <%= f.submit 'Follow'%>
-        <% end %> 
+        <%= link_to 'Follow', user_follows_path(user_id: @user.id ), method: :post %> 
       <% else %>
         <%= render "users/new_post_form" %>
       <% end %>

@@ -6,7 +6,6 @@ class PostsController < ApplicationController
 		@followed_ids = Follow.where(follower_id: current_user.id).select(:followed_id).map(&:followed_id)
 
 		@posts = Post.where(user_id: @followed_ids)
-		# @posts << Post.where(user_id:current_user.id)
 		@posts.order(:created_at)
 	end
 
@@ -18,7 +17,6 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 
 		    if @post.save
-		    	puts "\n\n\n\n\n\n #{@post} \n\n\n\n"
       render json: @post
     else
       render status: 400, nothing: true
