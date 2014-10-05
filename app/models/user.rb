@@ -18,8 +18,4 @@ class User < ActiveRecord::Base
     # puts "Current User: #{other_user.inspect}"
   	 follower_relationships.create!(followed_id: other_user.id)
   end
-
-  # def unfollow!(other_user)
-  #   follower
-  # end
 end

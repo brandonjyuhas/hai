@@ -3,8 +3,24 @@
   <div id="profile-info">
     <div id="username"><h5><%= current_user.username %></h5></div>
     <section class="section">
-      <div id="about"><h4><small><%= current_user.bio %></small></h4></div>
-      <div id="user-link"><h4><small><a href="www.google.com"><%= current_user.personal_website %></a></small></h4><div>
+      <div id="about">
+        <% if current_user.bio %>
+          <h4>
+            <small>
+              <%= current_user.bio %>
+            </small>
+          </h4>
+        <% else %> 
+          <input type="text">
+        <% end %>
+      </div>
+      <div id="user-link">
+        <h4>
+          <small>
+            <a href="<%= current_user.personal_website %>"><%= current_user.personal_website %></a>
+          </small>
+        </h4>
+        <div>
     </section>
     <hr>
     <section class="section">
