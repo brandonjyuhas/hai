@@ -3,7 +3,7 @@
 
 $($( ".js-regbutton" )[0]).on("click", function() {
   $( ".js-registration" ).toggle();
-  console.log("clicked");
+  // console.log("clicked");
 });
 
-console.log("loading?");
+// console.log("loading?");
