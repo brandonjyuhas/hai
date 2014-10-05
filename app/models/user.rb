@@ -15,7 +15,11 @@ class User < ActiveRecord::Base
   has_many :followed_users, through: :follower_relationships, source: :followed
 
   def follow!(other_user)
-    puts "Current User: #{other_user.inspect}"
+    # puts "Current User: #{other_user.inspect}"
   	 follower_relationships.create!(followed_id: other_user.id)
   end
+
+  # def unfollow!(other_user)
+  #   follower
+  # end
 end
