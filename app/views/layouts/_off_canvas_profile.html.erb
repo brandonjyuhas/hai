@@ -3,7 +3,7 @@
   <div id="profile-info">
     <div id="username"><h5><%= current_user.username %></h5></div>
     <section class="section">
-      <div id="about">
+      <div id="about" data-id="<%= current_user.id %>">
         <% if current_user.bio %>
           <h4>
             <small>
@@ -11,15 +11,25 @@
             </small>
           </h4>
         <% else %> 
-          <input type="text">
+          <form>
+            <input type="text"placeholder="Enter bio">
+          </form>
         <% end %>
       </div>
       <div id="user-link">
-        <h4>
-          <small>
-            <a href="<%= current_user.personal_website %>"><%= current_user.personal_website %></a>
-          </small>
-        </h4>
+        <% if current_user.bio %>
+          <h4>
+            <small>
+              <a href="<%= current_user.personal_website %>">
+                <%= current_user.personal_website %>
+              </a>
+            </small>
+          </h4>
+        <% else %>
+          <form>
+            <input type="text">
+          </form>
+        <% end %>
         <div>
     </section>
     <hr>
