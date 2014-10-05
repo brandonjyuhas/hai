@@ -19,13 +19,9 @@
 
     $.post("/posts", { 	post: { user_id: <%= current_user.id %>, body: text } })
     .done(function(data){
-    // $('ul').prepend("<li data-todo-id=" + data.id  +">" + data.task + "<input id=\"done\" name=\"done\" type=\"checkbox\" value=\"yes\"><span>&times</span></li>");
-    // $("li span").on('click', deleteObject);
-    // $("ul input").on('click', checkMark);
-    // })
-    console.log("WOWWWW");
+    location.reload();
 })
-    .fail(function(){ console.log("Didn't work"); });
+    .fail(function(){ console.log("Didn't work") });
 }
 
   });
