@@ -10,6 +10,9 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@posts = Post.where(user_id: params[:id])
 		@follow_request = User.follow(current_user, @user)
+		if @follow_request 
+			redirect_to @user
+		end 
 	end
 
 	def edit
