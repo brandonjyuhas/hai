@@ -13,19 +13,17 @@ class FollowsController < ApplicationController
 	end
 
 	def create
-		follow_params[:follower_id] = current_user
-		@follow = Follow.new(follow_params)
+		@user = User.find(params[:user_id])
+		@follow = current_user.follow!(@user)
+
+		if @follow
+			respond_to do |format|
+				format.html { redirect_to @user }
+			end 
+		end
 	end
 
 	def destroy
 		@follow = Follow.find(params[:id])
 	end
-
-
-	private
-
-		def follow_params
-			params.require(:follow).permit(:followed_id)
-		end
-
 end
