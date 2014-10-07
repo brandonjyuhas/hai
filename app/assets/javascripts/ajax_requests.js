@@ -8,7 +8,7 @@ var ajaxEdits = function(){
 			var user_id = $('#about').data('id');
 			$.ajax({
 				type: 'PATCH',
-				url: user_id,
+				url: 'users/'+user_id,
 				dataType: 'json',
 				data: {
 					user: {
